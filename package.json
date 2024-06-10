@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/accordion": "^2.0.34",
+    "@nextui-org/avatar": "^2.0.29",
     "@nextui-org/button": "2.0.33",
     "@nextui-org/code": "2.0.28",
     "@nextui-org/input": "2.2.1",

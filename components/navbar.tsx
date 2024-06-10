@@ -35,7 +35,7 @@ export const Navbar = () => {
               <Image
                 alt="Instagram Logo"
                 height={24}
-                src="Instagram_Glyph_Gradient.svg"
+                src="instagram_logo.svg"
                 width={24}
               />
             }
