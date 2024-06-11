@@ -5,6 +5,7 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { Avatar } from "@nextui-org/avatar";
+import { Tabs, Tab } from "@nextui-org/tabs";
 
 import { title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
@@ -41,44 +42,59 @@ export default function Home() {
           <Button variant="bordered">提供建議</Button>
         </Link>
       </div>
-      <div className="flex flex-col items-start justify-start py-2">
+      <div className="flex flex-col items-start justify-start gap-6 py-2">
         <h1 className="text-3xl font-semibold">政見主軸</h1>
-        <Accordion>
-          <AccordionItem key="1" aria-label="學生權益" title="學生權益">
-            <ul className="list-decimal list-inside">
-              <li>增加符合學生需求的福利社品項（優先推動非熟食類）</li>
-              <li>推動定期訂購外食（交通分流、安心店家清單）</li>
-              <li>
-                提供可追縱具體回應進度的意見箱（匿名／具名），避免意見提出後石沉大海，才能讓促進公共利益的政策實施。
-              </li>
-            </ul>
-          </AccordionItem>
-          <AccordionItem key="2" aria-label="Accordion 2" title="會員參與">
-            <ul className="list-decimal list-inside">
-              <li>
-                爭取推動多元活動（例如：歲末／修業晚會／班際競賽／互動性講座）
-              </li>
-              <li>
-                強化班級代表會議的監督性（定期召開）、並於學期初公告預定實施的政策以便盡早收集建議、研議學生議會的可行性
-              </li>
-            </ul>
-          </AccordionItem>
-          <AccordionItem key="3" aria-label="Accordion 3" title="資訊透明">
-            <ul className="list-decimal list-inside">
-              <li>逐步推動財務透明化與公布經費收支</li>
-              <li>
-                各種會議前後提供會議通知與摘要（校務、班級代表、午餐有約等）
-              </li>
-              <li>
-                設立學生會網站以提供政見所述之意見箱、重要訊息通知（校內活動、社團等）、學生自治重要規範（例：組織章程）
-              </li>
-            </ul>
-          </AccordionItem>
-        </Accordion>
+        <div className="w-full">
+          <h2 className="text-2xl">學生權益</h2>
+          <Accordion defaultExpandedKeys="3" itemClasses={{ content: "p-0" }}>
+            <AccordionItem key="1" title="增加福利社品項">
+              <Policy description="增加符合學生需求的福利社品項（優先推動非熟食類）" />
+            </AccordionItem>
+            <AccordionItem key="2" title="推動定期訂購外食">
+              {/* <Policy reason="我們希望能讓學生有更多元的飲食選擇" /> */}
+              <Policy description="推動定期訂購外食（交通分流、安心店家清單）" />
+            </AccordionItem>
+            <AccordionItem key="3" title="建置可追蹤回應的意見箱">
+              <Policy description="提供可追縱具體回應進度的意見箱（匿名／具名），避免意見提出後石沉大海，才能讓促進公共利益的政策實施。" />
+            </AccordionItem>
+          </Accordion>
+        </div>
+        <div className="w-full">
+          <h2 className="text-2xl">會員參與</h2>
+          <Accordion defaultExpandedKeys="2">
+            <AccordionItem key="1" title="推動多元活動">
+              <Policy method="爭取推動多元活動（例如：歲末／修業晚會／班際競賽／互動性講座）" />
+            </AccordionItem>
+            <AccordionItem key="2" title="強化班代大會監督性">
+              <Policy
+                method="定期召開班級代表會議並報告工作進展、提供即問即答時段、逐步推動預算審議制度、研議設立學生議會的可行性"
+                reason="我們認為目前的班代大會對於學生會的制衡性較為不足，希冀能藉由強化監督性，以便讓學生會的施政更符合學生會員所需。"
+              />
+            </AccordionItem>
+          </Accordion>
+        </div>
+        <div className="w-full">
+          <h2 className="text-2xl">資訊透明</h2>
+          <Accordion defaultExpandedKeys="1">
+            <AccordionItem key="1" title="財務透明化">
+              <Policy
+                description="逐步推動財務透明化與公布經費收支"
+                method="盤點學生會主要財務收支大方向後，每季度於學生會網站與 Instagram 公布經費收支。"
+                reason="學生會員所繳納的會費是學生會運作的根基，也是各種活動舉辦的經費來源，會員更應有權利知道自己所繳納的會費用途，透過資訊透明化也有助於增加溝通成效。"
+              />
+            </AccordionItem>
+            <AccordionItem key="2" title="提供會議摘要">
+              <Policy description="各種會議前後提供會議通知與摘要（校務、班級代表、午餐有約等）" />
+            </AccordionItem>
+            <AccordionItem key="3" title="設立網站提供活動通知">
+              <Policy description="設立學生會網站以提供政見所述之意見箱、重要訊息通知（校內活動、社團等）、學生自治重要規範（例：組織章程）" />
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
 
       <div className="flex flex-col items-start justify-start">
-        <h1 className="text-3xl font-semibold">候選人簡介</h1>
+        <h1 className="text-3xl font-semibold">候選人介紹</h1>
         <Accordion>
           <AccordionItem
             key="1"
@@ -152,17 +168,9 @@ export default function Home() {
             key="1"
             aria-label="學生權益"
             title="什麼是學生自治？"
-          ></AccordionItem>
-          <AccordionItem
-            key="2"
-            aria-label="Accordion 2"
-            title="參選動機"
-          ></AccordionItem>
-          <AccordionItem
-            key="3"
-            aria-label="Accordion 3"
-            title="運作理念"
-          ></AccordionItem>
+          />
+          <AccordionItem key="2" aria-label="Accordion 2" title="參選動機" />
+          <AccordionItem key="3" aria-label="Accordion 3" title="運作理念" />
         </Accordion>
       </div>
 
@@ -175,5 +183,29 @@ export default function Home() {
 
       <p className="text-center">競選網站持續更新中～</p>
     </section>
+  );
+}
+
+function Policy(props: {
+  description?: string;
+  reason?: string;
+  method?: string;
+}) {
+  return (
+    <Tabs
+      fullWidth
+      defaultSelectedKey={props.reason ? "2" : "1"}
+      variant="underlined"
+    >
+      <Tab key="1" title="政見簡述">
+        {props.description || "持續更新中～"}
+      </Tab>
+      <Tab key="2" title="制定緣由">
+        {props.reason || "持續更新中～"}
+      </Tab>
+      <Tab key="3" title="實施方式">
+        {props.method || "持續更新中～"}
+      </Tab>
+    </Tabs>
   );
 }

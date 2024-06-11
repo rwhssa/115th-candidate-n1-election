@@ -19,7 +19,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Image alt="Logo" height={24} src="favicon.svg" width={24} />
-            <p className="ml-1 text-inherit">學生會候選人 競選網站</p>
+            <p className="ml-1 text-inherit">一號學生會候選人</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
