@@ -6,6 +6,7 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { Avatar } from "@nextui-org/avatar";
 import { Tabs, Tab } from "@nextui-org/tabs";
+import Image from "next/image";
 
 import { title } from "@/components/primitives";
 import { siteConfig } from "@/config/site";
@@ -157,6 +158,20 @@ export default function Home() {
                 ，置於衛福部官網所整理的民間地圖，供大眾使用。
               </li>
             </ul>
+            <br />
+            <span className="text-primary">#參選動機</span>
+            <br />
+            學生會是在校園中實踐學生自治非常重要的組織，透過參選副會長，我希冀除了能為學生爭取各項權益、舉辦活動外，更重要的是扮演建立學校與學生間的橋梁，讓學生會員們都能參與學生自治，讓大家的聲音被聽見🗣️，並實質做出改變，也讓大家的高中生增添風采。
+            <br />
+            <br />
+            <span className="text-primary">#政見主軸</span>
+            <br />
+            我們的三大政見主軸聚焦在「學生權益、會員參與、資訊透明」，希冀能藉此讓各種聲音被聽見，並且做出最符合公共利益的決策，豐富大家的高中生活🤝。我們不開空頭支票，每項政見都經過嚴謹的討論與可行性分析，也邀請您到我們的競選網站上（哀居主頁連結）閱覽相關的實施計畫及制定緣由，未來在這裡也會持續發布政見說明的貼文。
+            <br />
+            <br />
+            <span className="text-primary">#積極參與公共事務</span>
+            <br />
+            我平時會主動關注各項公共議題的進展與討論，除了透過媒體報導外，我會透過文獻或立法院的議事錄，實際研究議題背後的脈絡，了解各方不同立場的訴求，除了各種社會議題外，也包括藉由了解學生自治的發展歷程與議題的脈絡式討論，更能從中尋求出雙方的共識，以利決策進行。
           </AccordionItem>
         </Accordion>
       </div>
@@ -177,7 +192,13 @@ export default function Home() {
       <div className="flex flex-col items-start justify-start gap-2">
         <h1 className="text-3xl font-semibold">最後</h1>
         <p>
-          無論你內心中決定的是哪組候選人，請你一定要在投票日當天，投下你寶貴的一票，實踐你的權利，也是推動學生自治的重要一環！
+          最後，感謝您閱讀到這裡，若您對我們的理念感興趣，請您投 1️⃣
+          號候選人一票。
+          <br />
+          倘若有幸當選，我們將在未來一年的任期裡，盡最大努力為仁武高中的同學們服務，為大家發聲✨。
+          <br />
+          另外，無論你內心中決定的是哪組候選人，請你一定要在
+          6/21（五），投下你寶貴的一票，實踐你的權利，也是推動學生自治的重要一環！
         </p>
       </div>
 
